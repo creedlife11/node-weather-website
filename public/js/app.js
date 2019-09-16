@@ -1,5 +1,3 @@
-console.log('client side javascript file has loaded')
-
 //const to store javascript representation of the form tag in html 
 const weatherForm = document.querySelector('form')
 
@@ -14,12 +12,13 @@ const messageTwo = document.querySelector('#message-2')
 
 //adding an event listener to gather info submitted via the search form from the webpage
 weatherForm.addEventListener('submit', (e) => {
-    messageTwo.textContent = ''
+    
+    //ensuring the search field is not empty
     e.preventDefault()
 
     //setting the text of paragraph with id=message-1 to loading while pulling data with fetch
     messageOne.textContent = 'Loading.....'
-    
+    messageTwo.textContent = ''
     const location = search.value
 
     //using fetch to add location to url and fetch json data  
