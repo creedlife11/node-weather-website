@@ -21,8 +21,9 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.textContent = ''
     const location = search.value
 
-    //using fetch to add location to url and fetch json data  
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    //using fetch to add location to url and fetch json data
+    //  
+    fetch('/weather?address=' + location).then((response) => {
     
     //if statement to catch if a user does not enter a location in the search form 
     if(location == undefined) {
